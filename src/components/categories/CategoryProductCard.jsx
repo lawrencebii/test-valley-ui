@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const CategoryProductDetails = () => {
-  const [collectionsHeader, setCollectionHeader] = useState([]);
+  const [collectionsHeader, setCollectionHeader] = useState(null);
 
   useEffect(() => {
     const fetchCategoryProductsData = async () => {
@@ -33,15 +33,17 @@ export const CategoryProductDetails = () => {
   }
   return (
     <div className="    py-10  flex-wrap flex flex-col">
-      <div>
-        <img
-          className="mb-2 rounded-md"
-          src={collectionsHeader?.thumbnail.uri}
-          alt={collectionsHeader.title}
-        />
-        <p>{collectionsHeader.description}</p>
-        <p className="text-xs">{collectionsHeader.rating}</p>
-      </div>
+      {collectionsHeader && (
+        <div>
+          <img
+            className="mb-2 rounded-md"
+            src={collectionsHeader?.thumbnail.uri}
+            alt={collectionsHeader.title}
+          />
+          <p>{collectionsHeader.description}</p>
+          <p className="text-xs">{collectionsHeader.rating}</p>
+        </div>
+      )}
     </div>
   );
 };

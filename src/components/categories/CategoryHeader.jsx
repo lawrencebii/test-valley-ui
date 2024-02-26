@@ -32,9 +32,11 @@ export const CategoryHeader = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="  flex-wrap  flex flex-col">
-      <div> {collectionsHeader.title}</div>
-      <div>{collectionsHeader.subtitle}</div>
-    </div>
+    collectionsHeader && (
+      <div className="  flex-wrap  flex flex-col">
+        <div> {collectionsHeader.title}</div>
+        <div>{collectionsHeader.subtitle}</div>
+      </div>
+    )
   );
 };

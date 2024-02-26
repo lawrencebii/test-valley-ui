@@ -44,7 +44,7 @@ export const MainBannerCard = () => {
         centeredSlides={true}
         // pagination={{ clickable: true }}
         // scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSwiper={(swiper) => {}}
         onSlideChange={() => console.log("slide change")}
       >
         {banner.map((item, index) => {
