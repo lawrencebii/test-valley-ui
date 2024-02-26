@@ -22,13 +22,13 @@ function NavBar() {
       <input
         type="text"
         placeholder="Search"
-        className="border-2 border-gray-300 rounded-md px-2 py-1 margin-auto block md:visible"
+        className="border-2 border-gray-300 rounded-md px-2 py-1 margin-auto hidden md:block"
       />
-      <div className="block md:hidden">
+      <div className="visible lg:hidden">
         <FontAwesomeIcon icon={faBell} className="font-normal mr-2" />
         <FontAwesomeIcon icon={faSearch} className="font-normal mr-2" />
       </div>
-      <h3 className="block md:visible">로그인 / 회원가입</h3>
+      <h3 className="hidden md:block">로그인 / 회원가입</h3>
     </div>
   );
 }
